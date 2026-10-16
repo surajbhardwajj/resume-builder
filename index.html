@@ -2,32 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f6fb">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f4f6fb" />
   <title>Forma — Resume Builder</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/forms.css">
-  <link rel="stylesheet" href="assets/css/templates.css">
-  <link rel="stylesheet" href="assets/css/themes.css">
-  <link rel="stylesheet" href="assets/css/print.css">
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/forms.css" />
+  <link rel="stylesheet" href="assets/css/templates.css" />
+  <link rel="stylesheet" href="assets/css/themes.css" />
+  <link rel="stylesheet" href="assets/css/print.css" />
 </head>
 
 <body>
   <header class="topbar">
     <a class="brand" href="#" aria-label="Forma home"><span class="brand-mark">f.</span><span>forma<span
           class="brand-light">/resume</span></span></a>
-    <div class="topbar-center"><span class="status-dot"></span><span id="saveStatus" role="status">All changes saved
-        locally</span></div>
+    <div class="topbar-center">
+      <span class="status-dot"></span><span id="saveStatus" role="status">All changes saved locally</span>
+    </div>
     <div class="top-actions">
       <button class="btn btn-quiet" id="manageResumesBtn">My resumes</button>
       <button class="btn btn-quiet" id="saveBtn">Save</button>
-      <button class="btn btn-primary" id="printBtn"><span aria-hidden="true">↓</span> Export PDF</button>
+      <button class="btn btn-primary" id="printBtn">
+        <span aria-hidden="true">↓</span> Export PDF
+      </button>
     </div>
   </header>
   <main class="app-shell">
@@ -36,96 +39,132 @@
         <div>
           <p class="eyebrow">WORKSPACE</p>
           <h1>Build your resume</h1>
-        </div><button id="newResumeBtn" class="icon-btn" title="Start a new resume"
-          aria-label="Start a new resume">＋</button>
+        </div>
+        <button id="newResumeBtn" class="icon-btn" title="Start a new resume" aria-label="Start a new resume">
+          ＋
+        </button>
       </div>
       <div class="editor-tabs" role="tablist" aria-label="Editor panels">
-        <button class="editor-tab active" data-tab="content" role="tab" aria-selected="true">Content</button>
-        <button class="editor-tab" data-tab="design" role="tab" aria-selected="false">Design</button>
-        <button class="editor-tab" data-tab="sections" role="tab" aria-selected="false">Sections</button>
-        <button class="editor-tab" data-tab="quality" role="tab" aria-selected="false">Review</button>
+        <button class="editor-tab active" data-tab="content" role="tab" aria-selected="true">
+          Content
+        </button>
+        <button class="editor-tab" data-tab="design" role="tab" aria-selected="false">
+          Design
+        </button>
+        <button class="editor-tab" data-tab="sections" role="tab" aria-selected="false">
+          Sections
+        </button>
+        <button class="editor-tab" data-tab="quality" role="tab" aria-selected="false">
+          Review
+        </button>
       </div>
       <div id="editorContent" class="editor-scroll">
         <section class="tab-panel active" data-panel="content">
           <div class="section-intro">
             <h2>Personal details</h2>
-            <p>Start with the essentials. Your preview updates as you type.</p>
+            <p>
+              Start with the essentials. Your preview updates as you type.
+            </p>
           </div>
           <form id="personalForm" class="field-grid">
             <label class="field full"><span>Full name</span><input name="fullName" placeholder="e.g. Alex Morgan"
-                autocomplete="name"></label>
+                autocomplete="name" /></label>
             <label class="field full"><span>Professional title</span><input name="title"
-                placeholder="e.g. Product Designer"></label>
+                placeholder="e.g. Product Designer" /></label>
             <label class="field"><span>Email</span><input name="email" type="email"
-                placeholder="alex@example.com"></label>
-            <label class="field"><span>Phone</span><input name="phone" type="tel" placeholder="+1 555 0100"></label>
-            <label class="field"><span>City / Country</span><input name="location" placeholder="Austin, TX"></label>
+                placeholder="alex@example.com" /></label>
+            <label class="field"><span>Phone</span><input name="phone" type="tel" placeholder="+1 555 0100" /></label>
+            <label class="field"><span>City / Country</span><input name="location" placeholder="Austin, TX" /></label>
             <label class="field"><span>LinkedIn URL</span><input name="linkedin" type="url"
-                placeholder="https://linkedin.com/in/..."></label>
+                placeholder="https://linkedin.com/in/..." /></label>
             <label class="field"><span>GitHub URL</span><input name="github" type="url"
-                placeholder="https://github.com/..."></label>
+                placeholder="https://github.com/..." /></label>
             <label class="field"><span>Portfolio URL</span><input name="portfolio" type="url"
-                placeholder="https://yourportfolio.com"></label>
-            <div class="field full photo-field"><label for="photoInput">Profile photo <span
-                  class="optional">optional</span></label><input id="photoInput" type="file"
-                accept="image/png,image/jpeg,image/webp"><small>JPG, PNG or WebP · up to 1 MB</small></div>
+                placeholder="https://yourportfolio.com" /></label>
+            <div class="field full photo-field">
+              <label for="photoInput">Profile photo <span class="optional">optional</span></label><input id="photoInput"
+                type="file" accept="image/png,image/jpeg,image/webp" /><small>JPG, PNG or WebP · up to 1 MB</small>
+            </div>
           </form>
           <div class="form-section">
             <div class="section-head">
-              <h2>Professional summary</h2><span class="count" id="summaryCount">0 / 600</span>
+              <h2>Professional summary</h2>
+              <span class="count" id="summaryCount">0 / 600</span>
             </div>
             <textarea id="summaryInput" rows="4" maxlength="600"
               placeholder="A concise overview of your experience, strengths, and the value you bring."></textarea>
-            <button class="text-btn" id="summaryExampleBtn">Use a sample summary</button>
+            <button class="text-btn" id="summaryExampleBtn">
+              Use a sample summary
+            </button>
           </div>
           <div class="form-section">
             <div class="section-head">
-              <h2>Work experience</h2><button class="small-add" data-add="experience">＋ Add</button>
+              <h2>Work experience</h2>
+              <button class="small-add" data-add="experience">＋ Add</button>
             </div>
             <div id="experienceEditor" class="repeat-list"></div>
           </div>
           <div class="form-section">
             <div class="section-head">
-              <h2>Education</h2><button class="small-add" data-add="education">＋ Add</button>
+              <h2>Education</h2>
+              <button class="small-add" data-add="education">＋ Add</button>
             </div>
             <div id="educationEditor" class="repeat-list"></div>
           </div>
           <div class="form-section">
             <div class="section-head">
-              <h2>Skills</h2><button class="small-add" data-add="skill">＋ Add</button>
+              <h2>Skills</h2>
+              <button class="small-add" data-add="skill">＋ Add</button>
             </div>
-            <p class="helper">Add skills individually or enter a comma-separated list.</p>
-            <div class="inline-add"><input id="skillsBulk" placeholder="JavaScript, UX research, SQL"><button
-                class="btn btn-secondary" id="addBulkSkills">Add</button></div>
+            <p class="helper">
+              Add skills individually or enter a comma-separated list.
+            </p>
+            <div class="inline-add">
+              <input id="skillsBulk" placeholder="JavaScript, UX research, SQL" /><button class="btn btn-secondary"
+                id="addBulkSkills">
+                Add
+              </button>
+            </div>
             <div id="skillsEditor" class="repeat-list compact-list"></div>
           </div>
           <div class="form-section">
             <div class="section-head">
-              <h2>Projects</h2><button class="small-add" data-add="projects">＋ Add</button>
+              <h2>Projects</h2>
+              <button class="small-add" data-add="projects">＋ Add</button>
             </div>
             <div id="projectsEditor" class="repeat-list"></div>
           </div>
           <div class="form-section">
             <div class="section-head">
-              <h2>Certifications</h2><button class="small-add" data-add="certifications">＋ Add</button>
+              <h2>Certifications</h2>
+              <button class="small-add" data-add="certifications">
+                ＋ Add
+              </button>
             </div>
             <div id="certificationsEditor" class="repeat-list"></div>
           </div>
           <div class="form-section">
             <div class="section-head">
-              <h2>Languages</h2><button class="small-add" data-add="languages">＋ Add</button>
+              <h2>Languages</h2>
+              <button class="small-add" data-add="languages">＋ Add</button>
             </div>
             <div id="languagesEditor" class="repeat-list"></div>
           </div>
           <div class="form-section">
             <div class="section-head">
-              <h2>Achievements</h2><button class="small-add" data-add="achievements">＋ Add</button>
+              <h2>Achievements</h2>
+              <button class="small-add" data-add="achievements">
+                ＋ Add
+              </button>
             </div>
             <div id="achievementsEditor" class="repeat-list"></div>
           </div>
           <div class="form-section">
             <div class="section-head">
-              <h2>Custom sections</h2><button class="small-add" id="addCustomSectionBtn">＋ Create</button>
+              <h2>Custom sections</h2>
+              <button class="small-add" id="addCustomSectionBtn">
+                ＋ Create
+              </button>
             </div>
             <div id="customEditor" class="repeat-list"></div>
           </div>
@@ -137,41 +176,53 @@
           </div>
           <div class="form-section">
             <div class="section-head">
-              <h2>Templates</h2><span class="count" id="templateCount">1 selected</span>
+              <h2>Templates</h2>
+              <span class="count" id="templateCount">1 selected</span>
             </div>
             <div id="templateGallery" class="template-gallery"></div>
           </div>
           <div class="form-section">
             <h2>Color palette</h2>
-            <div id="paletteChoices" class="palette-choices"></div><label class="field"><span>Custom accent</span>
-              <div class="color-control"><input type="color" id="accentColor"><input id="accentHex" maxlength="7"
-                  value="#3867e8" aria-label="Accent hex color"></div>
+            <div id="paletteChoices" class="palette-choices"></div>
+            <label class="field"><span>Custom accent</span>
+              <div class="color-control">
+                <input type="color" id="accentColor" /><input id="accentHex" maxlength="7" value="#3867e8"
+                  aria-label="Accent hex color" />
+              </div>
             </label><label class="field"><span>Heading color</span><input type="color" id="headingColor"
-                value="#1c2638"></label><label class="field"><span>Body text color</span><input type="color"
-                id="bodyColor" value="#465166"></label>
+                value="#1c2638" /></label><label class="field"><span>Body text color</span><input type="color"
+                id="bodyColor" value="#465166" /></label>
           </div>
           <div class="form-section">
-            <h2>Typography</h2><label class="field"><span>Font family</span><select id="fontFamily">
+            <h2>Typography</h2>
+            <label class="field"><span>Font family</span><select id="fontFamily">
                 <option value="DM Sans, Arial, sans-serif">DM Sans</option>
                 <option value="Arial, Helvetica, sans-serif">Arial</option>
                 <option value="Georgia, serif">Georgia</option>
-                <option value="Times New Roman, serif">Times New Roman</option>
-                <option value="IBM Plex Mono, monospace">IBM Plex Mono</option>
+                <option value="Times New Roman, serif">
+                  Times New Roman
+                </option>
+                <option value="IBM Plex Mono, monospace">
+                  IBM Plex Mono
+                </option>
               </select></label><label class="field"><span>Base font size <b id="fontSizeLabel">10.5 pt</b></span><input
-                id="fontSize" type="range" min="9" max="12" step=".5" value="10.5"></label><label
+                id="fontSize" type="range" min="9" max="12" step=".5" value="10.5" /></label><label
               class="field"><span>Heading size <b id="headingSizeLabel">12 pt</b></span><input id="headingSize"
-                type="range" min="10" max="17" step="1" value="12"></label><label class="field"><span>Line height <b
+                type="range" min="10" max="17" step="1" value="12" /></label><label class="field"><span>Line height <b
                   id="lineHeightLabel">1.4</b></span><input id="lineHeight" type="range" min="1.2" max="1.8" step=".1"
-                value="1.4"></label>
+                value="1.4" /></label>
           </div>
           <div class="form-section">
-            <h2>Page layout</h2><label class="field"><span>Page margins</span><select id="pageMargin">
+            <h2>Page layout</h2>
+            <label class="field"><span>Page margins</span><select id="pageMargin">
                 <option value="16">Compact — 16 mm</option>
                 <option value="19" selected>Standard — 19 mm</option>
                 <option value="23">Relaxed — 23 mm</option>
               </select></label><label class="field"><span>Section spacing <b id="spacingLabel">12 px</b></span><input
-                id="sectionSpacing" type="range" min="6" max="22" value="12"></label><button
-              class="btn btn-secondary btn-block" id="resetDesignBtn">Reset design defaults</button>
+                id="sectionSpacing" type="range" min="6" max="22" value="12" /></label><button
+              class="btn btn-secondary btn-block" id="resetDesignBtn">
+              Reset design defaults
+            </button>
           </div>
         </section>
         <section class="tab-panel" data-panel="sections">
@@ -180,19 +231,28 @@
             <p>Toggle visibility and change the order in your document.</p>
           </div>
           <div id="sectionManager" class="section-manager"></div>
-          <div class="form-section"><button class="btn btn-secondary btn-block" id="exportJsonBtn">Export resume data
-              (.json)</button><label class="btn btn-secondary btn-block file-button">Import resume data (.json)<input
-                id="importJsonInput" type="file" accept="application/json,.json" hidden></label></div>
+          <div class="form-section">
+            <button class="btn btn-secondary btn-block" id="exportJsonBtn">
+              Export resume data (.json)</button><label class="btn btn-secondary btn-block file-button">Import resume
+              data (.json)<input id="importJsonInput" type="file" accept="application/json,.json" hidden /></label>
+          </div>
         </section>
         <section class="tab-panel" data-panel="quality">
           <div class="section-intro">
             <h2>Resume review</h2>
-            <p>Practical checks before you send your application. This is guidance, not an ATS score.</p>
+            <p>
+              Practical checks before you send your application. This is
+              guidance, not an ATS score.
+            </p>
           </div>
           <div id="qualityChecks" class="quality-checks"></div>
-          <div class="note-card"><strong>ATS note</strong>
-            <p>Applicant tracking systems vary. A clean, text-first layout can help, but compatibility cannot be
-              guaranteed for every employer or parser.</p>
+          <div class="note-card">
+            <strong>ATS note</strong>
+            <p>
+              Applicant tracking systems vary. A clean, text-first layout can
+              help, but compatibility cannot be guaranteed for every employer
+              or parser.
+            </p>
           </div>
         </section>
       </div>
@@ -202,21 +262,27 @@
         <div>
           <p class="eyebrow">LIVE PREVIEW</p>
           <div class="preview-title">
-            <h2 id="previewName">Your resume</h2><span class="template-pill" id="currentTemplatePill">Classic
-              Professional</span>
+            <h2 id="previewName">Your resume</h2>
+            <span class="template-pill" id="currentTemplatePill">Classic Professional</span>
           </div>
         </div>
-        <div class="preview-actions"><button class="icon-btn" id="zoomOut" title="Zoom out"
-            aria-label="Zoom out">−</button><span id="zoomValue">80%</span><button class="icon-btn" id="zoomIn"
-            title="Zoom in" aria-label="Zoom in">＋</button><button class="icon-btn" id="fitZoom" title="Fit to screen"
-            aria-label="Fit to screen">⤢</button><button class="btn btn-secondary print-inline"
-            id="printPreviewBtn">Print preview</button></div>
+        <div class="preview-actions">
+          <button class="icon-btn" id="zoomOut" title="Zoom out" aria-label="Zoom out">
+            −</button><span id="zoomValue">80%</span><button class="icon-btn" id="zoomIn" title="Zoom in"
+            aria-label="Zoom in">
+            ＋</button><button class="icon-btn" id="fitZoom" title="Fit to screen" aria-label="Fit to screen">
+            ⤢</button><button class="btn btn-secondary print-inline" id="printPreviewBtn">
+            Print preview
+          </button>
+        </div>
       </div>
       <div class="document-stage" id="documentStage">
         <div id="resumeDocument" class="resume-document template-classic" aria-label="Resume document"></div>
       </div>
-      <div class="preview-footer"><span><span class="status-dot"></span> Live preview</span><span>A4 · <span
-            id="pageCount">1 page</span></span><span>Data stays in this browser</span></div>
+      <div class="preview-footer">
+        <span><span class="status-dot"></span> Live preview</span><span>A4 · <span id="pageCount">1
+            page</span></span><span>Data stays in this browser</span>
+      </div>
     </section>
   </main>
   <div id="toastRegion" class="toast-region" aria-live="polite"></div>
@@ -226,12 +292,20 @@
         <div>
           <p class="eyebrow">LOCAL LIBRARY</p>
           <h2>Your resumes</h2>
-        </div><button class="icon-btn" value="cancel" aria-label="Close dialog">×</button>
+        </div>
+        <button class="icon-btn" value="cancel" aria-label="Close dialog">
+          ×
+        </button>
       </div>
-      <p class="dialog-copy">Saved in this browser only. Local resumes do not sync across devices.</p>
+      <p class="dialog-copy">
+        Saved in this browser only. Local resumes do not sync across devices.
+      </p>
       <div id="savedResumeList" class="saved-resume-list"></div>
-      <div class="dialog-actions"><button class="btn btn-secondary" id="duplicateCurrentBtn" type="button">Duplicate
-          current</button><button class="btn btn-primary" id="dialogNewResumeBtn" type="button">＋ New resume</button>
+      <div class="dialog-actions">
+        <button class="btn btn-secondary" id="duplicateCurrentBtn" type="button">
+          Duplicate current</button><button class="btn btn-primary" id="dialogNewResumeBtn" type="button">
+          ＋ New resume
+        </button>
       </div>
     </form>
   </dialog>
