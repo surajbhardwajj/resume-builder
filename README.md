@@ -74,4 +74,3 @@ Template switching only changes `resume.design.template` and re-renders the prev
 =======
 # resume-builder
 A professional Resume Builder web application built with HTML, CSS, and Vanilla JavaScript. Create, customize, and preview resumes in real time with multiple templates, dynamic form inputs, and an intuitive user interface. Switch between resume designs without losing entered data and build job-ready resumes with ease.
->>>>>>> 618f8cabac707863105a8cf40fe76f873467e9cc
